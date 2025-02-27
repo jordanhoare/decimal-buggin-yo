@@ -1,11 +1,10 @@
 1.
 ```
-poetry run uvicorn main:app --host 0.0.0.0 --port 8080
+poetry run uvicorn main:app --host 0.0.0.0 --port 8080 --reload
 ```
 
 2.
 ```
-curl -X POST http://localhost:8080/ \
-  -H "Content-Type: application/json" \
-  -d '{"a": "asdasd", "b": "asdasdasd"}'
+curl -X GET http://localhost:8080/default
+curl -X GET http://localhost:8080/decimal
 ```
